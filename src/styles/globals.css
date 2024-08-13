@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.blue-logo {
+  filter: brightness(100%) saturate(90%) hue-rotate(70deg);
+}
+
+.bg-zoom:hover {
+  height: 300px;
+  overflow: hidden;
+  transition: transform 1s, filter 0.5s ease-out;
+  background-size: 110% !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-anim {
+  animation: scrolldown 2s infinite;
+}
+
+@keyframes scrolldown {
+  0%,
+  100% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.divider .shape-fill {
+  fill: rgba(255, 255, 255, 1) !important;
+}
+
+.divider-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-hero svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 146px;
+  transform: rotateY(180deg);
+}
+
+.divider-hero .shape-fill {
+  fill: #020617;
+}
+
+.hero-bg {
+  background: linear-gradient(
+    143.6deg,
+    rgba(156, 132, 252, 0.166) 20.79%,
+    rgba(0, 22, 102, 0.467) 40.92%,
+    rgba(51, 0, 255, 0) 70.35%
+  );
+}
+
+.divider-price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.divider-price svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.divider-price .shape-fill {
+  fill: #020617;
+}
+
+.autoplay-progress {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: var(--swiper-theme-color);
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.autoplay-progress-ticket {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--foreground-rgb);
+}
+
+.autoplay-progress-ticket svg {
+  --progress: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  stroke-width: 4px;
+  stroke: #ca1e4c;
+  fill: none;
+  stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+  stroke-dasharray: 125.6;
+  transform: rotate(-90deg);
+}
+
+.page-divider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.page-divider svg {
+  position: relative;
+  display: block;
+  width: calc(183% + 1.3px);
+  height: 146px;
+  transform: rotateY(180deg);
+}
+
+.page-divider .shape-fill {
+  fill: #ffffff;
+}
